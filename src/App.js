@@ -4,11 +4,14 @@ import About from './view/screen/About';
 import Details from './view/screen/Details';
 import Register from './view/screen/Resister';
 import Login from './view/screen/Login';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './view/style/Style.css'
 import { Container, Row, Col, Button, Nav, Form, NavDropdown, Navbar, FormText, } from 'react-bootstrap';
 
 function App() {
+
+  const [user,setUser]=useState(localStorage.getItem('user'));
   return (
     <>
       <BrowserRouter>
@@ -33,8 +36,8 @@ function App() {
                       
 
                       <Nav.Link href="/"><Link className='link' to="/">Home</Link></Nav.Link> 
-                      <Nav.Link href="/"> <Link className='link' to="/Register">Register</Link></Nav.Link>
-                       <Nav.Link href="/"><Link className='link' to="/About">About</Link></Nav.Link>
+                       <Nav.Link href="/"><Link className='link' to="/Buy Car">Buy Car</Link></Nav.Link>
+                       <Nav.Link href="/"> <Link className='link' to="/Register">Register</Link></Nav.Link>
                        <Nav.Link href="/"><Link className='link' to="/Login">Login</Link></Nav.Link>
                       {/* <Nav.Link href="#action1">Home</Nav.Link> */}
                       {/* <Nav.Link href="#action2">Details</Nav.Link> */}
@@ -77,9 +80,10 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
            <Route path='/Details' element={<Details />} /> 
+           
           <Route path='/Register' element={<Register/>} />
           <Route path='/Login' element={<Login/>} />
-
+           
           
         </Routes>
         

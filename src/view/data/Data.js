@@ -36,7 +36,7 @@ export var life=[require('../img/Driver-Eye-Movement-MOTR-Story-10-22-19.png'),r
 ,require('../img/istockphoto-1203914131-612x612.jpg',),require('../img/istockphoto-1030960660-612x612.jpg',),require('../img/everything-you-need-to-know-about-in-vehicle-infotainment-system-1280x720.jpg',)
 
 
-]\
+]
 
  export var max=[require('../img/2023_Genesis_G90_Gallery1.jpg'),require('../img/2021-mercedes-benz-s-class-103-15here-1618329293.jpeg'),
  require('../img/jpg (1).webp'),require('../img/rolls_royce_phantom_top_10.webp'),

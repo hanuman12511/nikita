@@ -6,6 +6,39 @@ function Login() {
   
   const[Email,setEmail]=useState('');
   const[Password,setPassword]=useState('');
+
+  let submitlogin=async()=>{
+    
+    let params={
+      email:email,
+      password:password
+    }
+    
+    console.log(params);
+    try {
+      let res =await axios.post("login",params).catch(err=>alert(err))
+      console.log(res.data);
+      
+      let {success,message,data} =res.data
+      if(success){
+      alert(message)
+   console.log(data);
+     localStorage.setItem("user",JSON.stringify(data))
+     setAccountLogin(localStorage.getItem("user"))
+      setAccount(!isVisible)
+      navigate("/")
+      }
+      else{
+        alert(message)
+       }
+       } catch (error) {
+      alert(error)
+    }
+    setEmail("")
+    setPassword("")
+  }
+
+
   function Login(){
     
     console.log(Email);
@@ -45,7 +78,7 @@ function Login() {
       {/* <Form.Group className="mb-3" controlId="formBasicCheckbox"> */}
         {/* <Form.Check type="checkbox" label="Check me out" /> */}
       {/* </Form.Group> */}
-      <Button variant="primary" onClick={Login}>
+      <Button variant="primary" onClick={submitlogin}>
         Login
       </Button>
     </Form>
