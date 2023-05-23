@@ -1,17 +1,19 @@
 import { Container, Row,Col,Form,Button } from "react-bootstrap";
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
-  
+  let navigate = useNavigate();
   const[Email,setEmail]=useState('');
   const[Password,setPassword]=useState('');
 
   let submitlogin=async()=>{
     
     let params={
-      email:email,
-      password:password
+      email:Email,
+      password:Password
     }
     
     console.log(params);
@@ -23,10 +25,10 @@ function Login() {
       if(success){
       alert(message)
    console.log(data);
-     localStorage.setItem("user",JSON.stringify(data))
-     setAccountLogin(localStorage.getItem("user"))
-      setAccount(!isVisible)
+     localStorage.setItem("user",Email)
+    
       navigate("/")
+      window.location.reload()
       }
       else{
         alert(message)

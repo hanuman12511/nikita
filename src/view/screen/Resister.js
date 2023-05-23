@@ -10,11 +10,7 @@ function Register() {
   const[Name,setName]=useState('');
   const[Email,setEmail]=useState('');
   const[Password,setPassword]=useState('');
-    // function Register(){
-      // console.log(Name);
-      // console.log(Email);
-      //  console.log(Password);
-    //  alert("Register")
+   
     let submitregister=async()=>{
       console.log(file);
       console.log(fileName);
@@ -26,10 +22,10 @@ function Register() {
       
         console.log(data);
         let params={
-        //  username:username,
-        //  email:email,
-        //  password:password,
-         image:file
+       username:Name,
+        email:Email,
+        password:Password,
+         /* image:file */
        }
          console.log(params);
       try {

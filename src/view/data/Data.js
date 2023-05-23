@@ -5,15 +5,15 @@
 // export var menubar=["Home","About","Project","Register","Login"]
 export var bannerimg=[require('../img/3_1377257414.jpg'),require('../img/RR-ServicePageBanner.jpg'),require('../img/Black-Badge-Ghost-2.jpg'),require('../img/000gtr.jpg')]
 export var productdata=[
-{id:1,name:'2018 Mahindra Scorpio S5',mrprate:'11,0000   -  15,0000',image:require('../img/mahindra-scorpio-964954e9.jpg')},
-{id:2,name:'FORTUNER',mrprate:'10,0000  -  15,0000',image:require('../img/download (4).jpg')},
-{id:3,name:'FORTUNER',mrprate:'20,0000  -  50,0000',image:require('../img/download (3).jpg')}]
+{id:1,name:'2018 Mahindra Scorpio S5',mrprate:110000,image:require('../img/mahindra-scorpio-964954e9.jpg')},
+{id:2,name:'FORTUNER',mrprate:100000,image:require('../img/download (4).jpg')},
+{id:3,name:'FORTUNER',mrprate:200000,image:require('../img/download (3).jpg')}]
 export var menu=[
 {id:4,name:'2022 Mahindra Thar LX 4 STR Hard Top Petrol AT',mrprate:'15,0000  -  18,0000',image:require('../img/images (2).jpg')},
-{id:5,name:'SWIFT',mrprate:'13,0000  -  15,0000',image:require('../img/download (5).jpg')},
-{id:6,name:'NAXON',mrprate:'11,0000  -  14,0000',image:require('../img/download (8).jpg')},
-{id:7,name:'MARCEDES',mrprate:'30,0000  -  50,0000',image:require('../img/images (1).jpg')},                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-{id:8,name:'SWIFT',mrprate:'30,0000  -  50,0000',image:require('../img/images (1).jpg')},
+{id:5,name:'SWIFT',mrprate:130000,image:require('../img/download (5).jpg')},
+{id:6,name:'NAXON',mrprate:110000,image:require('../img/download (8).jpg')},
+{id:7,name:'MARCEDES',mrprate:300000,image:require('../img/images (1).jpg')},                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+{id:8,name:'SWIFT',mrprate:300000,image:require('../img/images (1).jpg')},
 {id:9,name:'FORTUNER BLACK',mrprate:'30,0000  -  50,0000',image:require('../img/images (3).jpg')},
 {id:10,name:'KIA IN WHITE',mrprate:'30,0000  -  50,0000',image:require('../img/images (4).jpg')},
 {id:11,name:'2022 Mahindra Thar LX 4 STR Hard Top Petrol AT ',mrprate:'30,00000  - 50,00000',image:require('../img/Thar_1601615282959_1601615288316.webp')},
