@@ -9,22 +9,49 @@ export default function Cartshow(){
     const[user,setUser] = useState(localStorage.getItem('user'))
     const[cart,setCart] = useState('')
     const[pay,setPay] = useState('')
+     const [data, setData] = useState('')
     useEffect(()=>{
         async function show(){
                 let res =await axios.post('showtocart',{username:user}).catch(e=>console.log(e))
-                
+                console.log(res?.data);
                 setCart(res?.data)
                 let p =0
-                res?.map(d=>{
+                res?.data.map(d=>{
                     p+=d.mrprate
                 })
-
                 setPay(p)
         }
         show()
     },[])
 
-    console.log(cart.length>0);
+     async function show() {
+        let res = await axios.post('showtocart', {})
+        console.log(res.data);
+        setCart(res?.data)
+        let pay=0
+        res.data.map(d=>{
+            pay+= parseInt(d.Price)
+        })
+        console.log(pay);
+        setPay(pay)
+    }
+  async  function removeitem(index) {
+       
+    let arr=[]
+    cart.map((d, index1) => {
+                    if(index !== index1){
+                        arr.push(d)
+                    }        })
+            console.log(arr);        
+    let res = await axios.post('removecartitem', arr).catch(e=>console.log(e))
+                console.log(res?.data);
+           await setCart(arr)
+    
+            show()
+            window.location.reload()
+    
+        }
+   
     return(
         <>
         <Container>
@@ -39,7 +66,7 @@ export default function Cartshow(){
                
                cart.length>0?
                <Col>                {
-                    cart&&cart.map(d=>(
+                    cart&&cart.map((d,index)=>(
                         <Col>
                             <Row>
                                 <Col>
@@ -49,7 +76,9 @@ export default function Cartshow(){
                                 <p className="mx-4">Rs.{d.mrprate}/-</p>
                                 </div>
                               
-                              
+                                <Button className="remove mb-4" variant="outline-danger" onClick={() => removeitem(index)}>Remove</Button>
+
+
                                   
                                 </Col>
                             </Row>
